@@ -9,14 +9,14 @@ namespace RepuestoM.Client.Managers;
 
 
 
-public interface IUsuarioRolManager1
+public interface IUsuarioRolManager
 {
     Task<Result<int>> CreateAsync(UsuarioRolCreateRequest request);
     Task<ResultList<UsuarioRollRecords>> GetAsync();
     Task<Result<UsuarioRollRecords>> GetByIdAsync(int Id);
 }
 
-public class UsuarioRolManager : IUsuarioRolManager1
+public class UsuarioRolManager : IUsuarioRolManager
 {
     private readonly HttpClient httpClient;
 
